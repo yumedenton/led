@@ -32,8 +32,6 @@ void loop() {
 
       leds[1] = CRGB::Red;
 
-    }
-
   for(int i=0;i<n;i++){
 
     leds[n-1] = CRGB::White;
@@ -44,13 +42,11 @@ void loop() {
 
     leds[n-1] = CRGB::Black;
 
-  }
-
   for(int i=64;i<NUM_LEDS;i++){ 
 
       // Turn the first led red for 1 second
 
-      leds[0] = CRGB::Red; 
+      leds[0] = CRGB(255, 209, 28); 
 
       FastLED.show();
 
@@ -92,9 +88,9 @@ void loop() {
 
     for(int i=24;i<NUM_LEDS;i++){
 
-       // Turn the first led green for 1 second
+       // Turn the first led orange for 1 second
 
-      leds[0] = CRGB::Green; 
+      leds[0] = CRGB(244, 122, 66); 
 
       FastLED.show();
 
@@ -114,8 +110,7 @@ void loop() {
 
     for(int dot = 0; dot < NUM_LEDS; dot++){ 
 
-            leds[dot] = CRGB::Blue;
-
+            leds[dot] = CRGB(255, 119, 0);
             FastLED.show();
 
             // clear this led for the next time around the loop
@@ -124,7 +119,7 @@ void loop() {
 
             delay(30);
 
-        }
+        
 
     }
 
@@ -132,9 +127,16 @@ void loop() {
 
   }
 
+  }
+  }
+}
+  }
 }
 
-}
+ 
+
+
+
 
 
 
