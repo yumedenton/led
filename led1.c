@@ -24,13 +24,13 @@ void loop() {
 
     for(int i=0; i < n; i++){
 
-      leds[1] = CRGB::White;
+      leds[n-1] = CRGB::White;
 
       FastLED.show();
 
       delay(30);
 
-      leds[1] = CRGB::Red;
+      leds[n-1] = CRGB::Red;
 
   for(int i=0;i<n;i++){
 
@@ -40,11 +40,9 @@ void loop() {
 
     delay(30);
 
-    leds[n-1] = CRGB::Black;
+    leds[n-1] = CRGB::Red;
 
   for(int i=64;i<NUM_LEDS;i++){ 
-
-      // Turn the first led red for 1 second
 
       leds[0] = CRGB(255, 209, 28); 
 
@@ -66,7 +64,7 @@ void loop() {
 
    for(int i=110;i<NUM_LEDS;i++){
 
-      // Turn the first led blue for 1 second
+      // Turn the first led blue 
 
       leds[0] = CRGB::Blue; 
 
@@ -76,7 +74,7 @@ void loop() {
 
       
 
-      // Set the first led back to black for 1 second
+      // Set the first led back to black 
 
       leds[0] = CRGB::Black;
 
@@ -88,19 +86,9 @@ void loop() {
 
     for(int i=24;i<NUM_LEDS;i++){
 
-       // Turn the first led orange for 1 second
-
-      leds[0] = CRGB(244, 122, 66); 
-
-      FastLED.show();
-
-      delay(500);
-
+       // Turn the first led orange 
       
-
-      // Set the first led back to black for 1 second
-
-      leds[0] = CRGB::Black;
+      leds[0] = CRGB(244, 122, 66); 
 
       FastLED.show();
 
@@ -118,9 +106,16 @@ void loop() {
             leds[dot] = CRGB::Black;
 
             delay(30);
+    
+      
+ void loop() {
+         fill_rainbow( leds, NUM_LEDS, hue, 1);
+         FastLED.show();
+
+     
 
         
-
+      }
     }
 
    }
