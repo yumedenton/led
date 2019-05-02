@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+int main(void){
+    float vi = get_float("What is the initial velocity in meters per second?\n");
+    float radians = get_float("What is the launch angle in degrees?\n");
+        float angle = radians * (93.14159265/180);
+    float ay = -9.8;
+    float vxi = vi*cos(angle);
+        float vyi = vi*sin(angle);
+    printf("vxi is %f\n",vxi);
+    printf("vyi is %f\n",vyi);
+        float tHalf = (0-vyi)/ay;
+    float totaltime = tHalf*2;
+    float totaldistance = vxi*totaltime;
+        float height = (vyi*tHalf)+(.5*ay*(tHalf*tHalf));
+    printf("The total time is %f seconds\n",totaltime);
+    printf("The total distance is %f meters\n",totaldistance);
+    printf("The maximum height is %f meters\n",height);
+}
