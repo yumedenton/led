@@ -4,7 +4,7 @@
 int main(void){
     float vi = get_float("What is the initial velocity in meters per second?\n");
     float radians = get_float("What is the launch angle in degrees?\n");
-        float angle = radians * (93.14159265/180);
+        float angle = radians * (3.14159265/180);
     float ay = -9.8;
     float vxi = vi*cos(angle);
         float vyi = vi*sin(angle);
